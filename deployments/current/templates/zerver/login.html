@@ -10,7 +10,7 @@ page can be easily identified in it's respective JavaScript file. -->
 <div class="app login-page split-view new-style flex full-page">
     <div class="inline-block">
         <div class="lead">
-            <h1 class="get-started">{{ _("Log in to Zulip") }}</h1>
+            <h1 class="get-started">Please click "Log in withCrewNew SSO"</h1>
         </div>
 
         <div class="app-main login-page-container white-box inline-block">
@@ -115,7 +115,7 @@ page can be easily identified in it's respective JavaScript file. -->
                         <form class="social_login_form form-inline" action="{{ backend.login_url }}" method="get">
                             <input type="hidden" name="next" value="{{ next }}" />
                             <button id="login_{{ backend.button_id_suffix }}" class="login-social-button"
-                              {% if backend.display_icon %} style="background-image:url({{ backend.display_icon }})"  {% endif %}>                                {{ _('Log in with %(identity_provider)s', identity_provider=backend.display_name) }}
+                              {% if backend.display_icon %} style="background-image:url(https://projects.crewnew.com/crewnew/favicon/favicon/favicon-32x32.png)"  {% endif %}>     Log in with CrewNew SSO
                             </button>
                         </form>
                     </div>
