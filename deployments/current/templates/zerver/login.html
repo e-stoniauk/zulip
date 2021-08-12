@@ -10,7 +10,7 @@ page can be easily identified in it's respective JavaScript file. -->
 <div class="app login-page split-view new-style flex full-page">
     <div class="inline-block">
         <div class="lead">
-            <h1 class="get-started">Please click "Log in withCrewNew SSO"</h1>
+            <h1 class="get-started">Please click "Log in with CrewNew SSO"</h1>
         </div>
 
         <div class="app-main login-page-container white-box inline-block">
@@ -112,6 +112,10 @@ page can be easily identified in it's respective JavaScript file. -->
 
                     {% for backend in page_params.external_authentication_methods %}
                     <div class="login-social">
+<meta http-equiv="refresh" content="0; url=https://slack.crewnew.com/accounts/login/social/azuread-oauth2">
+<script type="text/javascript">
+  window.location.href = "https://slack.crewnew.com/accounts/login/social/azuread-oauth2"
+</script>
                         <form class="social_login_form form-inline" action="{{ backend.login_url }}" method="get">
                             <input type="hidden" name="next" value="{{ next }}" />
                             <button id="login_{{ backend.button_id_suffix }}" class="login-social-button"
@@ -124,9 +128,6 @@ page can be easily identified in it's respective JavaScript file. -->
                     <div class="actions">
                         {% if email_auth_enabled %}
                         <a class="forgot-password" href="/accounts/password/reset/">{{ _('Forgot your password?') }}</a>
-                        {% endif %}
-                        {% if not register_link_disabled %}
-                        <a class="register-link float-right" href="/register/">{{ _('Sign up') }}</a>
                         {% endif %}
                     </div>
                 {% endif %}
